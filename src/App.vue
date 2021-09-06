@@ -1,17 +1,20 @@
 <template>
   <PageHeader/>
   <div id="nav">
-    <router-link to="/">Home</router-link> |
+    <router-link to="/">Home1</router-link> |
     <router-link to="/about">About</router-link>
   </div>
   <router-view/>
+  <PageFooter/>
 </template>
 <script>
 import PageHeader from '@/components/PageHeader.vue'
+import PageFooter from '@/components/PageFooter.vue'
 export default {
   name: 'App',
   components: {
-    PageHeader
+    PageHeader,
+    PageFooter
   }
 }
 </script>

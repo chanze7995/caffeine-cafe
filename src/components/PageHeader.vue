@@ -1,6 +1,6 @@
 <template>
   <header>
-    <!-- <div :class="['mobileHeader',{ mobileMenuOpen:isMobileMenuOpen }]">
+    <div :class="['mobileHeader',{ mobileMenuOpen:isMobileMenuOpen }]">
       <div class="mobileHeader__logoImg" v-show="!isMobileMenuOpen" >
         <router-link to="/">
           <img src="@/assets/img/logo.svg" alt="logo">
@@ -10,7 +10,7 @@
         <Icon icon-name="menu" icon-class="mobileHeader__icon--menu" v-if="!isMobileMenuOpen" />
         <Icon icon-name="remove" icon-class="mobileHeader__icon--menu" v-if="isMobileMenuOpen" />
       </div>
-    </div> -->
+    </div>
     <ul :class="['headerNavbar',{ mobileMenuOpen:isMobileMenuOpen }]">
       <li class="headerNavbar__item" @click="toggleMobileMenu">
         <router-link to="/">首頁</router-link>
@@ -40,8 +40,24 @@
 </template>
 
 <script>
+// import Icon from '@/components/svgSprites/Icon.vue'
+import { ref } from 'vue'
 export default {
+  name: 'Header',
+  components: {
+    // Icon
+  },
+  setup () {
+    const isMobileMenuOpen = ref(false)
+    const toggleMobileMenu = () => {
+      isMobileMenuOpen.value = !isMobileMenuOpen.value
+    }
 
+    return {
+      isMobileMenuOpen,
+      toggleMobileMenu
+    }
+  }
 }
 </script>
 

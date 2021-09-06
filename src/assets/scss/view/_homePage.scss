@@ -1,0 +1,193 @@
+.homePageContainer{
+	padding: 0 3rem;
+}
+.homePageSection{
+	width: 100%;
+	min-height: calc(100vh - 100px);
+	display: flex;
+	align-items: center;
+}
+span{
+	font-size: 0.8rem;
+}
+.homeBannerSection{
+	position: relative;	
+}
+.homeBannerSection:before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 300px;
+	width: 400px;
+	height: 320px;
+	background-color: #6dc7eb;
+	;
+	z-index: 1;
+	transition: 1s;
+}
+.homeBannerSection:after{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	right: 100px;
+	width: 400px;
+	height: 320px;
+	background-color: #FBB13Cdd;
+	;
+	z-index: 1;
+	transition: 1s;
+}
+.homeBannerSection__content{
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 2;
+}
+.homeBannerSection__content__textBox h1{
+	color: #404040;
+	padding-left: 2rem;
+	padding:3rem;
+	font-size: 2.5rem;
+}
+.homeBannerSection__content__textBox p{
+	color: #404040;
+	padding-left: 2rem;
+	padding: 0 3rem;
+}
+.homeBannerSection__content__img{
+	width: 50%;
+	min-width: 300px;
+}
+.recommendSection{
+	justify-content: space-around;
+	margin: 2rem 0;
+}
+.showCardContainer{
+	display: flex;
+	background: linear-gradient(#F5F0E6,#E1DCD9);
+	padding: 2.5rem 1.5rem;
+}
+.showCard{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 337px;
+	padding: 1rem;
+	// background-color: #fff;
+}
+.showCard img{
+	width: 200px;
+}
+.showCard__content{
+	text-align: center;
+	padding-top: 2rem;
+}
+
+.recommendContent{
+	padding: 3rem;
+	text-align: center;
+}
+.recommendContent h2{
+	font-size: 2.5rem;
+}
+
+.igBlockContainer{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.igMainBlock{
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 60%;
+}
+.igMainBlock__icon{
+	position: absolute;
+	width: 2rem;
+	top: 0;
+}
+.igMainBlock__content{
+	padding: 2rem;
+}
+.igMainBlock__content h2{
+	font-size: 2rem;
+	line-height: 2;
+}
+.igMainBlock__img{
+	width: 45%;
+}
+.igSubBlock{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	width: 40%;
+}
+.blockItem {
+	width: 33.3%;
+	padding: 1rem;
+	padding-right: 0;
+}
+.blockItem img{
+	width: 100%;
+}
+@media (max-width: 1024px){
+	.showCard{
+		padding-top: 2rem;
+	}
+	.showCard img{
+		width: 150px;
+	}
+	.recommendSection{
+		flex-wrap: wrap;
+	}
+	.recommendContent{
+		padding-bottom: 5rem;
+	}
+}
+@media (max-width: 767px){
+	.homeBannerSection:before{
+		left: 50%;
+		width: 50vw;
+	}
+	.homeBannerSection__content{
+		flex-direction: column
+	}
+	.showCardContainer{
+		flex-wrap: wrap;
+	}
+	.showCard{
+		width: 100%;
+	}
+}
+@media (max-width: 414px){
+	.homeBannerSection{
+		position: static;
+	}
+	.homeBannerSection:before{
+		top: 0px;
+		left: 0;
+		width: 170px;
+		height: 310px;
+	}
+	.homeBannerSection:after{
+		bottom: 0;
+		right: 0;
+		width: 80px;
+		height: 100px;
+	}
+	.homeBannerSection__content{
+		flex-direction: column-reverse;
+	}
+	.showCardContainer{
+		flex-wrap: wrap;
+	}
+	// .showCard{
+
+	// }
+}
+

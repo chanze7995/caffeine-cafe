@@ -1,0 +1,42 @@
+.newsLetterContainer{
+	display: flex;
+	justify-content: space-between;
+	padding: 2rem;
+	background-color: #4B4B4A;
+  margin: 2.5rem;
+  margin-bottom: 0;
+}
+.newsLetterContainer p{
+	color: #fff;
+	font-size: 0.5rem;
+}
+.newsLetterContainer a{
+	color: #fff;
+	font-size: 0.5rem;
+}
+.footerInfoContainer{
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+.footerInfoContent{
+  padding: 3rem;
+}
+.footerInfoContent__title{
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+}
+.footerInfoContent__text{
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.copyright{
+  padding: 1.5rem;
+  line-height: 1.5rem;
+}
+@media (max-width: 414px){
+  .footerInfoContainer{
+    flex-wrap: wrap;
+}
+}
