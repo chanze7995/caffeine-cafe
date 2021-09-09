@@ -20,7 +20,7 @@ span{
 	left: 300px;
 	width: 400px;
 	height: 320px;
-	background-color: #6dc7eb;
+	background-color: $cyan;
 	;
 	z-index: 1;
 	transition: 1s;
@@ -32,7 +32,7 @@ span{
 	right: 100px;
 	width: 400px;
 	height: 320px;
-	background-color: #FBB13Cdd;
+	background-color: $orange;
 	;
 	z-index: 1;
 	transition: 1s;
