@@ -1,0 +1,45 @@
+.cartContainer{
+  position: fixed;
+  top: 70%;
+  right: 5%;
+  z-index: 5;
+}
+.cartContent {
+  background: rgb(9, 201, 153);
+  padding: 1rem 1rem;
+  border-radius: 10px;
+  width: 250px;
+  clip-path: circle(15% at 87% 79%);
+  transition: all .5s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    clip-path: circle(75%);
+    background: #00B6FF;
+  }
+
+  h1 {
+      color: white;
+      margin: 0;
+  }
+
+  p {
+      color: white;
+      font-size: .8rem;
+  }
+
+  &:hover .cart__icon {
+    fill: rgba(255,255,255,0)
+  }
+}
+.cartIcon{
+  display: flex;
+  flex-direction: row-reverse;
+}
+.cart__icon {
+  width: 1.7rem;
+  height: 1.7rem;
+  margin: 1rem 4px 0 0;
+  fill:#fff;
+  transition: fill .5s;
+}

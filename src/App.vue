@@ -1,19 +1,18 @@
 <template>
   <PageHeader/>
-  <div id="nav">
-    <router-link to="/">Home1</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
   <router-view/>
+  <CartBotton />
   <PageFooter/>
 </template>
 <script>
 import PageHeader from '@/components/PageHeader.vue'
+import CartBotton from '@/components/CartBotton.vue'
 import PageFooter from '@/components/PageFooter.vue'
 export default {
   name: 'App',
   components: {
     PageHeader,
+    CartBotton,
     PageFooter
   }
 }
