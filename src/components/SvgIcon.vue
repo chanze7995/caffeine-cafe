@@ -28,7 +28,11 @@ export default {
         return 'svg-icon'
       }
     }
-
+  },
+  setup () {
+    const requireAll = requireContext => requireContext.keys().map(requireContext)
+    const req = require.context('../assets/icon', false, /\.svg$/)
+    requireAll(req)
   }
 }
 </script>

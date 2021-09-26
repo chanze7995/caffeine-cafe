@@ -12,11 +12,9 @@
 </template>
 
 <script>
-import SvgIcon from '@/components/SvgIcon.vue'
 export default {
   name: 'CartBotton',
   components: {
-    SvgIcon
   }
 }
 </script>
