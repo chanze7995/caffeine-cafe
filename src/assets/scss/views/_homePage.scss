@@ -1,3 +1,8 @@
+.sectionTitle{
+	color: #404040;
+	padding: 3rem 0;
+	font-size: 2.5rem;
+}
 .homePageContainer{
 	padding: 0 3rem;
 }
@@ -45,20 +50,13 @@ span{
 	align-items: center;
 	z-index: 2;
 }
-.homeBannerSection__content__textBox h1{
-	color: #404040;
-	padding-left: 2rem;
-	padding:3rem;
-	font-size: 2.5rem;
-}
-.homeBannerSection__content__textBox p{
-	color: #404040;
-	padding-left: 2rem;
+.homeBannerSection__content__textBox{
 	padding: 0 3rem;
 }
 .homeBannerSection__content__img{
 	width: 50%;
 	min-width: 300px;
+	padding-top: 1.5rem;
 }
 .recommendSection{
 	justify-content: space-around;
@@ -87,24 +85,25 @@ span{
 }
 
 .recommendContent{
-	padding: 3rem;
+	padding: 3rem 0;
 	text-align: center;
 }
-.recommendContent h2{
-	font-size: 2.5rem;
+// .recommendContent h1{
+// 	font-size: 2.5rem;
+// }
+.igSection{
+	justify-content: center;
 }
-
 .igBlockContainer{
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	justify-content: space-evenly;
+	align-items: center
 }
 .igMainBlock{
 	position: relative;
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
-	width: 60%;
+	justify-content: center;
 }
 .igMainBlock__icon{
 	position: absolute;
@@ -112,30 +111,38 @@ span{
 	top: 0;
 }
 .igMainBlock__content{
-	padding: 2rem;
-}
-.igMainBlock__content h2{
-	font-size: 2rem;
-	line-height: 2;
-}
-.igMainBlock__img{
-	width: 45%;
+	padding: 2rem 0;
 }
 .igSubBlock{
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: flex-end;
+	justify-content: center;
+	width: 50%;
+}
+.igSubBlock__mainImg{
 	width: 40%;
+	padding: .5rem;
+}
+.igSubBlock__groupImg{
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	align-items: center;
 }
 .blockItem {
 	width: 33.3%;
-	padding: 1rem;
-	padding-right: 0;
+	padding: .5rem;
 }
 .blockItem img{
 	width: 100%;
+	vertical-align: middle;
 }
 @media (max-width: 1024px){
+	.homeBannerSection__content__textBox{
+		padding: 0 2rem;
+	}
+	.showCardContainer{
+		padding: 1.5rem;
+	}
 	.showCard{
 		padding-top: 2rem;
 	}
@@ -143,16 +150,39 @@ span{
 		width: 150px;
 	}
 	.recommendSection{
-		flex-wrap: wrap;
+		flex-direction: column-reverse;
 	}
 	.recommendContent{
-		padding-bottom: 5rem;
+		padding-bottom: 4rem;
 	}
+	.igSection{
+		padding: 2rem 0;
+	}
+	.igBlockContainer{
+		flex-direction: column;
+		padding: 2rem 0;
+	}
+	.igMainBlock{
+		padding: 2rem 0;
+		padding-top: 0;
+	}
+	.igSubBlock{
+		width: 100%;
+	}
+	
 }
 @media (max-width: 767px){
+	.sectionTitle{
+		padding: 2rem 0;
+	}
 	.homeBannerSection:before{
 		left: 50%;
 		width: 50vw;
+		height: 45vh;
+	}
+	.homeBannerSection:after{
+		right: 30%;
+		width: 60vw;
 	}
 	.homeBannerSection__content{
 		flex-direction: column
@@ -165,20 +195,25 @@ span{
 	}
 }
 @media (max-width: 414px){
+	.homeBannerSection__content__textBox{
+		padding: 0 1rem;
+	}
+	.sectionTitle{
+		padding: 1.5rem 0;
+		font-size: 2rem;
+	}
 	.homeBannerSection{
 		position: static;
 	}
 	.homeBannerSection:before{
-		top: 0px;
-		left: 0;
-		width: 170px;
-		height: 310px;
+    left: 0;
+    width: 40vw;
+    height: 350px;
 	}
 	.homeBannerSection:after{
-		bottom: 0;
 		right: 0;
-		width: 80px;
-		height: 100px;
+    width: 30vw;
+    height: 100px;
 	}
 	.homeBannerSection__content{
 		flex-direction: column-reverse;
@@ -186,8 +221,5 @@ span{
 	.showCardContainer{
 		flex-wrap: wrap;
 	}
-	// .showCard{
-
-	// }
 }
 

@@ -9,14 +9,14 @@ module.exports = {
     config.module // 修改svg預設處理,
       .rule('svg')
       .exclude
-      .add(resolve('src/assets/icon'))
+      .add(resolve('src/assets/icons'))
       .end()
 
     config.module // 新增 svg-sprite-loader 設定
       .rule('svg-sprite-loader')
       .test(/\.svg$/)
       .include
-      .add(resolve('src/assets/icon')) // svg圖示的路徑
+      .add(resolve('src/assets/icons')) // svg圖示的路徑
       .end()
       .use('svg-sprite-loader')
       .loader('svg-sprite-loader')

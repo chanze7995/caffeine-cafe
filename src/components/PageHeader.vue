@@ -7,8 +7,8 @@
         </router-link>
       </div>
       <div :class="['mobileHeader__toggleMenuBtn',{ open:isMobileMenuOpen }]" @click="toggleMobileMenu">
-        <Icon icon-name="menu" icon-class="mobileHeader__icon--menu" v-if="!isMobileMenuOpen" />
-        <Icon icon-name="remove" icon-class="mobileHeader__icon--menu" v-if="isMobileMenuOpen" />
+        <SvgIcon icon-name="menu" icon-class="mobileHeader__icon--menu" v-if="!isMobileMenuOpen" />
+        <SvgIcon icon-name="remove" icon-class="mobileHeader__icon--menu" v-if="isMobileMenuOpen" />
       </div>
     </div>
     <ul :class="['headerNavbar',{ mobileMenuOpen:isMobileMenuOpen }]">
@@ -40,12 +40,10 @@
 </template>
 
 <script>
-// import Icon from '@/components/svgSprites/Icon.vue'
 import { ref } from 'vue'
 export default {
   name: 'Header',
   components: {
-    // Icon
   },
   setup () {
     const isMobileMenuOpen = ref(false)
@@ -62,5 +60,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/scss/component/_pageHeader.scss';
+@import '@/assets/scss/components/_pageHeader.scss';
 </style>

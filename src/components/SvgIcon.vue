@@ -30,8 +30,8 @@ export default {
     }
   },
   setup () {
-    const requireAll = requireContext => requireContext.keys().map(requireContext)
-    const req = require.context('../assets/icon', false, /\.svg$/)
+    const requireAll = requireContext => requireContext.keys().map(requireContext) // 解析獲取.svg檔名的文件名稱
+    const req = require.context('../assets/icons', false, /\.svg$/) // 獲取當前目錄下，所有.svg檔名的文件
     requireAll(req)
   }
 }

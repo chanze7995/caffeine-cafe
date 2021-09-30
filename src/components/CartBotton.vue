@@ -20,5 +20,5 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import '@/assets/scss/component/_cartBotton.scss';
+@import '@/assets/scss/components/_cartBotton.scss';
 </style>
