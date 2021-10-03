@@ -6,6 +6,26 @@ const routes = [
     path: '/',
     name: 'HomePage',
     component: () => import(/* webpackChunkName: "HomePage" */ '../views/HomePage.vue')
+  },
+  {
+    path: '/shop',
+    name: 'Shop',
+    redirect: '/shop/all',
+    component: () => import(/* webpackChunkName: "Shop" */ '../views/Shop.vue'),
+    children: [
+      {
+        path: ':group',
+        name: 'ProductExhibit',
+        component: () =>
+          import(/* webpackChunkName: "ProductExhibit" */ '../components/shop/ProductExhibit.vue')
+      },
+      {
+        path: 'bean',
+        name: 'Bean',
+        component: () =>
+          import(/* webpackChunkName: "ProductExhibit" */ '../components/shop/ProductExhibit.vue')
+      }
+    ]
   }
   // {
   //   path: '/Home1',
